@@ -4,7 +4,7 @@ import useTaskCollection from "./hooks/useTaskCollection";
 import Task from "./components/Task";
 
 function App() {
-  const { tasks, addTask, removeTask } = useTaskCollection();
+  const { tasks, addTask, removeTask, editTask } = useTaskCollection();
   return (
     <>
       <Title title="Lista de Tasks" />
@@ -13,7 +13,9 @@ function App() {
         {tasks.map((task) => (
           <Task
             key={task.id}
+            id={task.id}
             title={task.title}
+            editTask={editTask}
             changeButton={() => removeTask(task.id)}
           />
         ))}

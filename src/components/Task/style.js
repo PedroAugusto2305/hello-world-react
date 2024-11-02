@@ -12,7 +12,7 @@ const TaskStyle = styled.section`
   transition: background-color 0.3s;
 `;
 
-const TaskContentStyle = styled.p`
+const TaskContentStyle = styled.div`
   flex: 1;
   color: #333;
   font-size: 1rem;

@@ -19,9 +19,11 @@ export default function useTaskCollection() {
 
   const editTask = (id, newTitle) => {
     setTasks((state) => {
-      return state.map((task) => task.id === id ? { ...task, title: newTitle } : task)
-    })
-  }
+      return state.map((task) =>
+        task.id === id ? { ...task, title: newTitle } : task
+      );
+    });
+  };
 
   return { tasks, addTask, removeTask, editTask };
 }
